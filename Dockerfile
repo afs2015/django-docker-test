@@ -8,7 +8,8 @@ WORKDIR /code
 
 ADD requirements.txt /code/
 
-RUN pip install -r requirements.txt
+RUN pip install pipenv
+RUN pipenv install --system --deploy
 
 RUN python /code/manage.py collectstatic --noinput
 

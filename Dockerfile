@@ -10,4 +10,6 @@ ADD requirements.txt /code/
 
 RUN pip install -r requirements.txt
 
+RUN python /code/manage.py collectstatic --noinput
+
 ADD . /code/
